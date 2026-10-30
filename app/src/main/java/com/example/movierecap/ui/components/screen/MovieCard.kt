@@ -1,4 +1,4 @@
-package com.example.movierecap.ui.components
+package com.example.movierecap.ui.components.screen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -22,7 +22,7 @@ fun MovieCard(
     modifier: Modifier = Modifier,
     title: String,
     author: String,
-    rate: Float
+    rate: Float,
 ) {
     Column(
         modifier = modifier

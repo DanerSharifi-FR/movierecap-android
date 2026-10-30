@@ -13,8 +13,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
-import com.example.movierecap.ui.components.MovieDetail
-import com.example.movierecap.ui.components.MovieListScreen
+import com.example.movierecap.ui.components.screen.details.MovieDetailScreen
+import com.example.movierecap.ui.components.screen.list.MovieListScreen
 import com.example.movierecap.ui.navigation.MovieNavGraph
 import com.example.movierecap.ui.theme.MovieRecapTheme
 
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
                             composable<MovieNavGraph.MovieDetails> { backStackEntry ->
                                 val movieNavData =
                                     backStackEntry.toRoute<MovieNavGraph.MovieDetails>()
-                                MovieDetail(
+                                MovieDetailScreen(
                                     movieId = movieNavData.id,
                                     onBack = {
                                         navController.popBackStack()
